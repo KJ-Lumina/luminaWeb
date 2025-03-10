@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquarium Theme</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to My Underwater World</h1>
+        <p>Explore the deep blue sea!</p>
+        <div class="bubbles"></div>
+    </div>
+    <script>
+        function createBubbles() {
+            const bubbleContainer = document.querySelector(".bubbles");
+            for (let i = 0; i < 20; i++) {
+                let bubble = document.createElement("div");
+                bubble.classList.add("bubble");
+                bubble.style.left = Math.random() * 100 + "vw";
+                bubble.style.animationDuration = (Math.random() * 5 + 5) + "s";
+                bubbleContainer.appendChild(bubble);
+            }
+        }
+        createBubbles();
+    </script>
+</body>
+</html>
